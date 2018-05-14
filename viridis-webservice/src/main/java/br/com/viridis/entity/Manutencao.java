@@ -45,8 +45,9 @@ public class Manutencao {
 	private Servico servico;
 	
 	@Column(name="data_manutencao")
+	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	@JsonFormat(pattern = "dd/MM/yyyy")
+	@JsonFormat(pattern = "dd/MM/yyyy",timezone = "EST")
 	private Date dataManutencao;
 	
 }
